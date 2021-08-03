@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Sumana&display=swap');
 
+/* change scheme: ffd97d, dac4f7, 0094c6, E07A5F */
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
@@ -9,14 +11,14 @@ body {
 }
 
 ::-moz-selection {
-  background: #fdf2e8; 
+  background: #DAC4F7; 
 }
 ::selection {
-  background: #fdf2e8; 
+  background: #DAC4F7; 
 }
 
 .navbar {
-  background-color: #ABE188;
+  background-color: #0094C6;
 }
 
 .navbar-expand-lg .navbar-collapse {
@@ -44,7 +46,7 @@ h1 {
   color: #000;
 }
 
-.guess-button, .high-button, .low-button {
+.guess-button, .high-button, .low-button, .play-button {
   font-family: serif;
   font-size: 2rem;
   border: none;
@@ -54,19 +56,27 @@ h1 {
   padding: 1rem;
   cursor: pointer;
   border-radius: 4px;
+  margin-top: 15px;
 }
 
 .higher-button {
-  background: #ABE188;
+  background: #80CFA9;
 }
 .higher-button:hover {
-  background: #b9e69c;
+  background: #93d6b6;
 }
 
 .lower-button {
-  background: #FF5964;
+  background: #FFD97D;
 }
 .lower-button:hover {
-  background: #ff737c;
+  background: #ffe097;
+}
+
+.play-button {
+  background: #DAC4F7;
+}
+.play-button:hover {
+  background: #e8dafa;
 }
 

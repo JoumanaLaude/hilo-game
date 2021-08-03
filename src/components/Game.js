@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Container, Col, Row } from "reactstrap";
+import { Card, Container, Col, Row } from "reactstrap";
 
-const suits = ["Clubs", "Hearts", "Diamonds", "Spades"];
-const values = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+const suits = ["of Clubs", "of Hearts", "of Diamonds", "of Spades"];
+const values = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"];
 const deck = [];
 
 for (let suit of suits) {
@@ -45,7 +45,7 @@ export default function Game() {
       ]);
       setCardDeck((cards) => cards.slice(0, cards.length - 2));
    };
-   // {cards} will print deck randomized
+
    const draw = () => {
       let tempCards = [];
       tempCards[1] = drawnCards[0];
@@ -62,21 +62,22 @@ export default function Game() {
       <Container className="mt-5 pt-5">
          <Row>
             <h1>High-Low Card Game</h1>
+            <p className="align-center">Guess if the next card is higher or lower.</p>
+            {/* <p>{cards.length}</p> */}
 
-            <p>{cards.length}</p>
+            <p className="align-center">{drawnCards.length < 2 ? "" : drawnCards[1].value}{" "}{drawnCards.length < 2 ? "" : drawnCards[1].suit}</p>
 
-            <Col>
+            <p>
                <button onClick={() => makeGuess("higher")} value="higher" className="guess-button higher-button">Higher</button>{' '}
-               <button onClick={() => makeGuess("lower")} value="lower" className="guess-button lower-button">Lower</button>
-            </Col>
+               <button onClick={() => makeGuess("lower")} value="lower" className="guess-button lower-button">Lower</button></p>
+         </Row>
 
+         <Row>
             <Col>
                <p>Your current streak is {points}!</p>
-               <p>Your Card: {drawnCards.length < 2 ? "" : drawnCards[1].value}{" "}{drawnCards.length < 2 ? "" : drawnCards[1].suit} </p>
             </Col>
 
             {/* <p>Hidden Card: (Test): {drawnCards.length < 2 ? "" : drawnCards[0].value}{" "}{drawnCards.length < 2 ? "" : drawnCards[0].suit}</p> */}
-
          </Row>
       </Container>
    );

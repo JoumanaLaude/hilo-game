@@ -12,10 +12,10 @@ export default function About() {
                   <br />You have to guess whether the hidden card is higher or lower than the one shown.
                   <br />Aces high!</p>
             </Col>
-            </Row>
-            <Row>
+         </Row>
+         <Row>
             <Col>
-            <Link to="/play"><button className="guess-button higher-button">Play Game</button></Link>
+               <Link to="/play"><button className="guess-button play-button">Play Game</button></Link>
             </Col>
          </Row>
       </Container>

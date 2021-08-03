@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Start from './Start';
-import About from './About';
 import { Switch, Route, Redirect } from 'react-router-dom';
+import Game from './Game';
 
 class Main extends Component {
 
    render() {
-      const PlayGame = () => {
+      const HomePage = () => {
          return (
             <Start />
          );
@@ -17,9 +17,9 @@ class Main extends Component {
          <div>
             <Header />
             <Switch>
-               <Route path='/play' component={PlayGame} />
-               <Route exact path='/about' component={About} />
-               <Redirect to='/play' />
+               <Route path='/about' component={HomePage} />
+               <Route exact path='/play' component={Game} />
+               <Redirect to='/about' />
             </Switch>
          </div>
       );

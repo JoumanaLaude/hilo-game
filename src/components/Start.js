@@ -1,10 +1,10 @@
 import React from 'react'
-import Game from './Game';
+import About from './About';
 
 function Start() {
    return (
       <div>
-         <Game />
+         <About />
          {/* make start button > lead to game component */}
       </div>
    )
