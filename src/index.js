@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './App.css';
 import App from './App';
+import 'bootstrap/dist/css/bootstrap.css';
+// ^ very important to get navbar to work...
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

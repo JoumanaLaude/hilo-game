@@ -1,38 +1,72 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Sumana&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
   text-align: center;
+  background-color: #FDE8E9;
+  color: #000; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-moz-selection {
+  background: #fdf2e8; 
+}
+::selection {
+  background: #fdf2e8; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+  background-color: #ABE188;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar-expand-lg .navbar-collapse {
+  justify-content: center; 
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-light .navbar-nav .nav-link {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #55433B;
+  padding: 15px; 
+}
+  
+a:hover, a:focus, .fa:hover,
+.navbar .navbar-nav .nav-link:not(.disabled):hover,
+.navbar .navbar-nav .nav-link:not(.disabled):focus {
+  color: #fff;
+  text-decoration: none; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  font-family: 'Sumana', serif;
+  font-size: 4rem;
+  color: #000;
 }
+
+.guess-button, .high-button, .low-button {
+  font-family: serif;
+  font-size: 2rem;
+  border: none;
+  color: #000;
+  outline: none;
+  font-weight: 400;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.higher-button {
+  background: #ABE188;
+}
+.higher-button:hover {
+  background: #b9e69c;
+}
+
+.lower-button {
+  background: #FF5964;
+}
+.lower-button:hover {
+  background: #ff737c;
+}
+
