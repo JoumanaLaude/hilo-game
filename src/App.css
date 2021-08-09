@@ -5,11 +5,16 @@
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;  
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
 }
 
 body > #root > div {
   height: 100vh;
+}
+
+p {
+  font-size: 1.4rem;
 }
 
 ::selection {
@@ -25,7 +30,7 @@ body > #root > div {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  font-family: 'Sumana', serif;
+  font-family: 'Montserrat', serif;
   font-size: 1.6rem;
   padding: 10px; 
 }

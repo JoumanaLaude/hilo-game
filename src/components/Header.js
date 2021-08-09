@@ -3,7 +3,7 @@ import { Nav, Navbar, NavbarToggler, Collapse, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import '../App.css';
 
-class Header extends Component {
+ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,20 +11,14 @@ class Header extends Component {
     };
 
     this.toggleNav = this.toggleNav.bind(this);
-    this.toggleModal = this.toggleModal.bind(this);
   }
 
   toggleNav() {
-    this.setState({
-      isNavOpen: !this.state.isNavOpen
-    });
+    this.setState({ isNavOpen: !this.state.isNavOpen });
   }
 
-  toggleModal() {
-    this.setState({
-      isModalOpen: !this.state.isModalOpen
-    });
-  }
+  // https://stackoverflow.com/questions/32452695/react-bootstrap-how-to-collapse-menu-when-item-is-selected
+  // HELP WITH NAVBAR TOGGLE W/ HOOKS ^ 
 
   render() {
     return (
