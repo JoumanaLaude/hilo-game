@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Card, Container, Col, Row } from "reactstrap";
+import { Container, Col, Row } from "reactstrap";
+import { faLevelUpAlt, faLevelDownAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const suits = ["of Clubs", "of Hearts", "of Diamonds", "of Spades"];
+const suits = ["Diamonds", "Clubs", "Hearts", "Spades"];
 const values = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"];
 const deck = [];
 
-for (let suit of suits) {
-   for (let value of values) {
+for (let value of values) {
+   for (let suit of suits) {
       //deck.push(`${values[value]} of ${suits[suit]}`);
       deck.push({ suit: suit, value: value });
    }
@@ -20,12 +22,12 @@ export default function Game() {
 
    const [points, setPoints] = useState(0);
    const makeGuess = (guess) => {
-      if (drawnCards[0].value >= drawnCards[1].value && guess === "lower") {
+      if (deck.indexOf(drawnCards[0]) <= deck.indexOf(drawnCards[1]) && guess === "lower") {
          console.log("You win!");
          setPoints(points + 1);
          draw();
       } else if (
-         drawnCards[0].value <= drawnCards[1].value &&
+         deck.indexOf(drawnCards[0]) >= deck.indexOf(drawnCards[1]) &&
          guess === "higher"
       ) {
          console.log("You win!");
@@ -59,17 +61,16 @@ export default function Game() {
    }, []);
 
    return (
-      <Container className="mt-5 pt-5">
+      <Container className="mt-5 p-5">
          <Row>
-            <h1>High-Low Card Game</h1>
-            <p className="align-center">Guess if the next card is higher or lower.</p>
+            <h1>Higher or Lower?</h1>
+            <p className="align-center">Guess if the next card is higher or lower! Remember Ace is high. ^_^</p>
             {/* <p>{cards.length}</p> */}
 
-            <p className="align-center">{drawnCards.length < 2 ? "" : drawnCards[1].value}{" "}{drawnCards.length < 2 ? "" : drawnCards[1].suit}</p>
+            <p className="align-center drawn"><strong> {drawnCards.length < 2 ? "" : drawnCards[1].value}{" of "}{drawnCards.length < 2 ? "" : drawnCards[1].suit} </strong></p>
 
-            <p>
-               <button onClick={() => makeGuess("higher")} value="higher" className="guess-button higher-button">Higher</button>{' '}
-               <button onClick={() => makeGuess("lower")} value="lower" className="guess-button lower-button">Lower</button></p>
+            <p><button onClick={() => makeGuess("higher")} value="higher" className="guess-button higher-button button"><FontAwesomeIcon icon={faLevelUpAlt} /> Higher</button>{' '}
+               <button onClick={() => makeGuess("lower")} value="lower" className="guess-button lower-button button">Lower <FontAwesomeIcon icon={faLevelDownAlt} /></button></p>
          </Row>
 
          <Row>

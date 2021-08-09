@@ -1,53 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Sumana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Sumana&family=Single+Day&display=swap');
 
-/* change scheme: ffd97d, dac4f7, 0094c6, E07A5F */
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.2rem;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  background-color: #FDE8E9;
-  color: #000; 
+  font-family: 'Montserrat', sans-serif;  
 }
 
-::-moz-selection {
-  background: #DAC4F7; 
+body > #root > div {
+  height: 100vh;
 }
+
 ::selection {
-  background: #DAC4F7; 
+  background: #fff; 
 }
 
-.navbar {
-  background-color: #0094C6;
+.navbar, .footer {
+  background-color: #DAC4F7;
 }
 
-.navbar-expand-lg .navbar-collapse {
+.navbar-collapse {
   justify-content: center; 
 }
 
 .navbar-light .navbar-nav .nav-link {
-  font-family: "Libre Baskerville", serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #55433B;
-  padding: 15px; 
+  font-family: 'Sumana', serif;
+  font-size: 1.6rem;
+  padding: 10px; 
 }
-  
+
+.navbar-nav > li{
+  padding-right:30px;
+}
+
+.footer {
+  height: 100px;
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+}
+
+.icon {
+  color: #333;
+  text-decoration: none;
+}
+
 a:hover, a:focus, .fa:hover,
 .navbar .navbar-nav .nav-link:not(.disabled):hover,
 .navbar .navbar-nav .nav-link:not(.disabled):focus {
-  color: #fff;
-  text-decoration: none; 
-}
-
-h1 {
-  font-family: 'Sumana', serif;
-  font-size: 4rem;
   color: #000;
 }
 
+h1 {
+  font-family: 'Single Day', cursive;
+  font-size: calc(3.375rem + 1.5vw)!important;
+  color: #000;
+}
+
+.container-bg {
+  background-color: #D1F0FB;
+}
+
 .guess-button, .high-button, .low-button, .play-button {
-  font-family: serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   border: none;
   color: #000;
@@ -57,6 +74,10 @@ h1 {
   cursor: pointer;
   border-radius: 4px;
   margin-top: 15px;
+}
+
+.button {
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
 .higher-button {

@@ -28,19 +28,20 @@ class Header extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <Navbar className="navbar navbar-expand-lg navbar-light py-1" fixed="top">
+      <>
+        <Navbar expand="md" className="navbar navbar-light">
           <div className="container">
             <NavbarToggler onClick={this.toggleNav} />
             <Collapse isOpen={this.state.isNavOpen} navbar>
               <Nav navbar>
+                <NavItem><NavLink className="nav-link" to="/home">Home</NavLink></NavItem>
                 <NavItem><NavLink className="nav-link" to="/about">About</NavLink></NavItem>
                 <NavItem><NavLink className="nav-link" to="/play">Play Game</NavLink></NavItem>
               </Nav>
             </Collapse>
           </div>
         </Navbar>
-      </React.Fragment>
+      </>
     );
   }
 }

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import Start from './Start';
+import Footer from './Footer';
+import Home from './Home';
+import About from './About';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Game from './Game';
 
@@ -9,7 +11,7 @@ class Main extends Component {
    render() {
       const HomePage = () => {
          return (
-            <Start />
+            <Home />
          );
       };
 
@@ -17,10 +19,12 @@ class Main extends Component {
          <div>
             <Header />
             <Switch>
-               <Route path='/about' component={HomePage} />
+               <Route path='/home' component={HomePage} />
+               <Route exact path='/about' component={About} />
                <Route exact path='/play' component={Game} />
                <Redirect to='/about' />
             </Switch>
+            <Footer />
          </div>
       );
    }
