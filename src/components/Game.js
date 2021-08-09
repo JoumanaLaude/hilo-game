@@ -56,9 +56,11 @@ export default function Game() {
       setDrawnCards(tempCards);
    };
 
+   // useEffect error:
+   // https://stackoverflow.com/questions/55840294/how-to-fix-missing-dependency-warning-when-using-useeffect-react-hook
    useEffect(() => {
       firstDraw();
-   }, []);
+   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
    return (
       <Container className="mt-5 p-5">

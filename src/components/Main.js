@@ -22,7 +22,7 @@ class Main extends Component {
                <Route path='/home' component={HomePage} />
                <Route exact path='/about' component={About} />
                <Route exact path='/play' component={Game} />
-               <Redirect to='/about' />
+               <Redirect to='/home' />
             </Switch>
             <Footer />
          </div>
