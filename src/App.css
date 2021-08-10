@@ -18,7 +18,7 @@ p {
 }
 
 ::selection {
-  background: #fff; 
+  background: #f7f4c4; 
 }
 
 .navbar, .footer {
@@ -65,7 +65,7 @@ h1 {
 }
 
 .container-bg {
-  background-color: #D1F0FB;
+  background-color: #daecfa;
 }
 
 .guess-button, .high-button, .low-button, .play-button {
