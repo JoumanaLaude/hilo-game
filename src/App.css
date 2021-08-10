@@ -68,7 +68,7 @@ h1 {
   background-color: #daecfa;
 }
 
-.guess-button, .high-button, .low-button, .play-button {
+.guess-button, .play-button {
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   border: none;
@@ -82,21 +82,21 @@ h1 {
 }
 
 .button {
+  font-family: 'Single Day', cursive;
+  font-size: calc(2rem + 1.5vw)!important;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
-.higher-button {
-  background: #80CFA9;
-}
-.higher-button:hover {
-  background: #93d6b6;
+.guess-button {
+  background: #aed6f4;
 }
 
-.lower-button {
-  background: #FFD97D;
+.higher-button:hover {
+  background: #e1f7c4;
 }
+
 .lower-button:hover {
-  background: #ffe097;
+  background: #f7dac4;
 }
 
 .play-button {

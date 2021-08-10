@@ -11,7 +11,7 @@ const Header = (props) => {
         <div className="container">
           <NavbarToggler onClick={() => setIsOpen(isOpen ? false : "isOpen")} />
           <Collapse isOpen={isOpen} navbar>
-            <Nav className="ml-3" navbar>
+            <Nav navbar>
               <NavItem><NavLink onClick={() => setIsOpen(false)} className="nav-link" to="/home">Home</NavLink></NavItem>
               <NavItem><NavLink onClick={() => setIsOpen(false)} className="nav-link" to="/about">About</NavLink></NavItem>
               <NavItem><NavLink onClick={() => setIsOpen(false)} className="nav-link" to="/play">Play Game</NavLink></NavItem>
