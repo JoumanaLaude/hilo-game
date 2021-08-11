@@ -65,7 +65,14 @@ h1 {
 }
 
 .container-bg {
-  background-color: #daecfa;
+  /* background-color: #daecfa; */
+  background: #daecfa;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 7px,
+    #ebf5fc 9px,
+    transparent 13px
+  );
 }
 
 .guess-button, .play-button {
@@ -84,7 +91,17 @@ h1 {
 .button {
   font-family: 'Single Day', cursive;
   font-size: calc(2rem + 1.5vw)!important;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  /* transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out; */
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+}
+
+.button:hover {
+  background-color: #e8dafa;
+  box-shadow: 0px 15px 20px rgba(232, 218, 250, .5);
+  color: #444;
+  transform: translateY(-4px);
 }
 
 .guess-button {

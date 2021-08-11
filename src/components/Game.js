@@ -78,7 +78,6 @@ export default function Game() {
          <Row>
             <Col>
                <p>Your current streak is {points}!</p>
-               <p>some img here</p>
             </Col>
 
             {/* <p>Hidden Card: (Test): {drawnCards.length < 2 ? "" : drawnCards[0].value}{" "}{drawnCards.length < 2 ? "" : drawnCards[0].suit}</p> */}

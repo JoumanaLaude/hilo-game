@@ -9,7 +9,7 @@ export default function Home() {
          <Row>
             <h1>HiLo Card Game</h1>
             <Col>
-               <p>How good is your RNG? High Low card game, bet you can’t get all 52 points loser.</p>
+               <p>How good is your RNG? Bet you can’t get all 52 points! ;)</p>
                <p><img width="250" src={cards} alt="card gif" className="img-fluid rounded float-right" /></p>
             </Col>
          </Row>
